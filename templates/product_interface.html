@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品縮圖頁面</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="product_interface.css">
+</head>
+{% block content %}
+<body>
+
+    <header class="container">
+        <h1 class="text-center">商品展示</h1>
+    </header>
+    <main class="container">
+        <div class="container">
+            <div class="row">
+                {% for product in products %}
+                <div class="col-md-3">
+                    <div class="product">
+                        <img src="{{ url_for('static', filename='/item_img/' + product.item_name + '.jpg') }}" style="max-width: 200px; max-height: 200px;">
+                        <h4>{{ product.item_name }}</h4>
+                        <p>Price: ${{ product.item_price }}</p>
+                        <form action="{{ url_for('do_buy') }}" method="POST">
+                            <input type="hidden" name="item_id" value="{{ product.id }}">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+{% endblock %}
+</html>
+

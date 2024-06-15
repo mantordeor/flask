@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/styles.css" rel = "sytlesheet" type = "text/css">
+    <title>Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+        .navigation {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id = "header">
+        <style type = "text/css">
+            *{
+                margin:0;
+                padding:0;
+            }
+            li{
+                list-style: none;
+            }
+            a{
+                text-decoration: none;
+            }
+            #header{
+                background-color: #007bff;
+                width: 100%;
+                height: 50px;
+            }
+            #header .menu{
+                display: flex;
+                height: 100%;
+                line-height: 50px;
+                max-width: 600px;
+                padding: 0 20px;
+            }
+            #header .menu li{
+                height: 100%;
+            }
+            #header li:hover{
+                background: #f8f9fa;
+                transition: 0.5s;
+            }
+            #header .menu li a{
+                font: bolder normal 16px Source Sans Pro;
+                color: #fff;
+                padding: 14px 15px;
+            }
+            #header .menu .blog-subfunction li{
+                display: none;
+                position: absolute;
+                background: #008080;
+                border-radius: 5px;
+            }
+            #header .menu .blog-subfunction li{
+                padding: 0 0.5em;
+                text-align:center;
+            }
+            #header .menu .blog:hover .blog-subfunction{
+                display: block;
+            }
+        </style>
+        <ul>
+            <div class = "menu">
+                <li class = "front-page"><a href = "#">首頁</a></li>
+                <li class = "blog"><a href="#">商品</a></li>
+                    <ul class = "blog-subfunction">
+                        <li><a href="#">wawawa</li>
+                    </ul>
+            </div>
+        </ul>
+        
+    </div>
+    <div class="container">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/2981/2981011.png" alt="Joy's Shop Logo">
+        </div>
+        <style type = "text/css">
+            .welcome-section {
+                padding-top: 50px;
+                margin-bottom: 20px; /* 添加标题和按钮之间的间距 */
+            }
+
+            .button-group button {
+                margin-right: 10px; /* 按钮之间的间距 */
+            }
+
+            .button-group {
+                margin-bottom: 100px;
+            }
+        </style>
+        <div class="welcome-section">
+            <h1>Welcome to Someone's Shop</h1>
+        </div>
+        <div class="navigation">
+            <form action = "/" method="post">
+                <div class="button-group">
+                    <button type = "submit" name = "Login">Login</button>
+                    <button type = "submit" name = "Signup">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
